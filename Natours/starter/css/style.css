@@ -31,26 +31,15 @@ body{
     background-position: top;
     clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
 }
-.logo-box{
+.header__logo-box{
     position: absolute;
     left: 4rem;
     top: 4rem;
 }
-.logo{
+.header__logo{
     height: 4rem;
 }
-.logo-box:active{
-    animation: logo-rotate 3s ease-out;
-}
-@keyframes logo-rotate{
-    0%{
-        transform: rotate(180deg);
-    }
-    100%{
-        transform: rotate3d(270deg);
-    }
-} 
-.text-box{
+.header__text-box{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -61,14 +50,14 @@ body{
     color: #ffffff;
     text-transform: uppercase;
 }
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3rem;
     animation: moveInLeft 1.5s;
 }
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size: 2rem;
     letter-spacing: 1.4rem;
@@ -137,14 +126,14 @@ body{
     transform: scale(1.5);
     opacity: 0;
 }
-.btn-white::after{
+.btn--white::after{
     background-color: #fff;
 }
-.btn-white{
+.btn--white{
     background-color: #ffffff;
     color: #777777;
 }
-.btn-animate{
+.btn--animate{
     animation: moveInUp 1s ease-out 0.5s;
     animation-fill-mode: backwards;
 }
