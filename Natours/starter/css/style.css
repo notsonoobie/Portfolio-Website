@@ -96,7 +96,13 @@ body {
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-8 {
+.u-margin-bottom--small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom--medium {
+  margin-bottom: 4rem; }
+
+.u-margin-bottom--big {
   margin-bottom: 8rem; }
 
 .btn {
@@ -136,6 +142,52 @@ body {
   .btn--animate {
     animation: moveInUp 1s ease-out 0.5s;
     animation-fill-mode: backwards; }
+
+.btn-txt:link, .btn-txt:visited {
+  font-size: 1.6rem;
+  color: #28b485;
+  display: inline-block;
+  text-decoration: none;
+  padding: 3px;
+  border-bottom: 1px solid #28b485;
+  transition: all .3s; }
+
+.btn-txt:hover {
+  background-color: #28b485;
+  color: #fff;
+  box-shadow: 0 0.9rem 3rem rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px); }
+
+.btn-txt:active {
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
+  transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    position: absolute;
+    width: 55%;
+    border-radius: 5px;
+    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 0.2s; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover, .composition__photo:active {
+      z-index: 2;
+      transform: scale(1.2);
+      outline-offset: 2rem;
+      outline: 1.5rem solid #55c57a;
+      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.5); }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.9); }
 
 .row {
   max-width: 114rem;
