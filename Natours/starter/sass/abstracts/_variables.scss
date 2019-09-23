@@ -1,14 +1,23 @@
 //FONT 
 $default-font--size: 1.6rem;
 
+//BOX
+$box--height: 50rem;
 //COLORS
 $color-primary: #55c57a;
 $color-primary--light: #7ed56f;
 $color-primary--dark: #28b485;
 $color-grey--dark: #777;
 $color-grey--light-1: #f7f7f7;
+$color-grey--light-2: #eeee;
+
 $color-white: #fff;
 $color-black: #000;
+$color-box--orangeL: #ffb900;
+$color-box--orangeD: #ff7730;
+$color-box--blueL: #2998ff;
+$color-box--blueD: #5643fa;
+
 
 //GRIDS
 $grid-width: 114rem; //Recommended to use 1140px for Grid Designs -> Root is at 10px(62.5%)

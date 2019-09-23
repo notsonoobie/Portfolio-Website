@@ -56,3 +56,13 @@ body{
         margin-bottom: 3rem;
     }
 }
+.card-standout-btn{
+    text-transform: uppercase;
+    display: block;
+    padding-top: 5px;
+    width: 50%;
+    margin: 0 auto;
+    background-image: linear-gradient(to right,$color-box--blueL,$color-box--blueD);
+    background-clip: text;
+    color: transparent;
+}

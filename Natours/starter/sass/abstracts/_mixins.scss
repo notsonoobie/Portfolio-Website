@@ -5,3 +5,13 @@
         display: table;
     }
 }
+@mixin box-shadow--btn{
+    &:hover{
+        box-shadow: 0 .9rem 3rem rgba($color-black,.5);
+        transform: translateY(-2px);
+    }
+    &:active{
+        box-shadow: 0 .2rem 1rem rgba($color-black,.5);
+        transform: translateY(0);
+    }
+}

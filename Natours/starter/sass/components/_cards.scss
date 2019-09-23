@@ -1,0 +1,107 @@
+.card{
+    perspective: 100rem;
+    -moz-perspective: 100rem;
+    -webkit-perspective: 100rem;
+    position: relative;
+    height: $box--height;  //Placing the height here also, beacause we cannot clearfix(this won't work) with position-absolute    
+    &__side{
+        height: $box--height;
+        transition: all .7s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        overflow: hidden; //To adjust the image with the rounded borders
+        border-radius: 1rem;
+        box-shadow: 0 1rem 3rem rgba($color-black, 0.2);
+
+        &--front{
+            //EMPTY
+        }
+        &--back{
+            transform: rotateY(-180deg);
+            &-1{
+                background-image: linear-gradient(to right bottom,$color-box--orangeL,$color-box--orangeD);
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom,$color-box--blueL,$color-box--blueD);
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom,$color-primary--light,$color-primary--dark);
+            }
+        }
+    }
+    &:hover &__side--front{
+        transform: rotateY(180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+    &__image{
+        background-size: cover;
+        height: 20rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+        -moz-clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+        -o-clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+        &--1{
+            background-image: linear-gradient(to right bottom,$color-box--orangeL,$color-box--orangeD),url("../img/nat-5.jpg");
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom,$color-box--blueL,$color-box--blueD),url("../img/nat-6.jpg");
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom,$color-primary--light,$color-primary--dark),url("../img/nat-7.jpg");
+        }
+    }
+    &__heading{
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 3px;
+        &--1{
+            background-image: linear-gradient(to right bottom,$color-box--orangeL,$color-box--orangeD);
+        }
+        &--2{
+            background-image: linear-gradient(to right bottom,$color-box--blueL,$color-box--blueD);
+        }
+        &--3{
+            background-image: linear-gradient(to right bottom,$color-primary--light,$color-primary--dark);
+        }
+        color: $color-white;
+        position: absolute;
+        top: 13rem;
+        right: 2rem;
+    }
+    &__description{
+        padding: 2px;
+        ul{
+            list-style: none;
+            width: 70%;
+            margin: 0 auto;
+        }
+        li{
+            text-align: center;
+            font-size: $default-font--size;
+            padding: 1rem;
+            &:not(:last-child){
+                border-bottom: 1px solid $color-grey--light-2;
+            }
+        }
+        &--pgraph{
+            text-align: center;
+            margin-top: 2rem;
+            padding: 0rem 2rem;
+            letter-spacing: .4px;
+            &-back{
+                //display: inline-block;
+                font-weight: lighter;
+                font-size: 3rem;
+                text-align: center;
+                margin: 9rem;
+            }
+        }
+    }
+}

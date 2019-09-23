@@ -13,3 +13,15 @@
 .u-letter-spacing--small{
     letter-spacing: 1.5px;
 }
+.u-color--white{
+    color: $color-white;
+}
+.u-focus{
+    font-weight: 700;
+    word-spacing: 2px;
+}
+.u-lineargrad{
+        background-image: linear-gradient(to right bottom,$color-box--blueL,$color-box--blueD);
+        background-clip: text;
+        color: transparent;
+}
