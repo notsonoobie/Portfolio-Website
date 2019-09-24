@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="assets/Fonts/linea-open-source.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
+        <!--jQuery Minified-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <title>Rahul Gupta | My Resume</title>
     </head>
     <body>
@@ -37,7 +38,7 @@
                         <p class="paragraph">Though I am pursuing Mechanical Engineering, but it didn't stop me to follow my passion. I have knowledge of Modern JavaScript, Html&amp;Css, SASS, Bootstrap, jQuery, SQL, Webpack, Git&amp;Github, PHP, JSON, AJAX, C&amp;Cpp,PP&amp;OOP, Basic Knowledge of Microprocessor 8086.</p>
                         <h3 class="heading-tertiary u-letter-spacing--small u-margin-bottom--small">Architectures I Follow</h3>
                         <p class="paragraph">I am up-to-date with the modern and modular architectures followed by the companies for Maintainability, Scalability and efficient handling of codes like MVC, Rest API, 7-1 Pattern, DRY Methodology, BEM Principles.</p>
-                        <a href="#" class="btn-txt">Hire Me &rarr;</a>
+                        <a href="#about-me" class="btn-txt">Hire Me &rarr;</a>
                     </div>
                     <div class="col-1-of-2">
                         <div class="composition">
@@ -80,8 +81,8 @@
                     </div>
                 </div>
             </section>
-            <section id="about-me" class="section-diversions">
-                <div class="u-center-text u-margin-bottom--big">
+            <section class="section-diversions">
+                <div id="about-me" class="u-center-text u-margin-bottom--big">
                     <h2 class="heading-secondary">
                         About Me
                     </h2>
@@ -184,6 +185,24 @@
                     <a href="assets/Resume/RahulGupta-Resume.pdf" download="download" class="classic-btn" title="Download PDF Resume">Resume</a>
                 </div>
             </section>
+            <section class="section-getquote">
+                <div class="u-center-text u-margin-bottom--big">
+                    <h2 class="heading-secondary">
+                        Grab a Quote &amp; Stay Motivated
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="quote">
+                        <figure class="quote__img">
+                            <img src="" alt="Quote Image" id="load-image" class="quote__img--content">
+                        </figure>
+                        <div class="quote__text">
+                            <h3 id="load-title" class="heading-tertiary u-margin-bottom--small">Loreum Ipsum</h3>
+                            <p id="load-quote" class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab facere, eos deserunt praesentium ex dolorum dolore corrupti maiores dignissimos aspernatur quas. Numquam consequuntur est vero incidunt </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <!-- GRID TEST -->
     <!--
@@ -257,5 +276,6 @@
 
         </section>
     -->
+    <script src="customs/app.js"></script>
     </body>
 </html>

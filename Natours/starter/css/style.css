@@ -134,8 +134,8 @@ body {
 
 .u-icon {
   display: inline-block;
-  font-size: 3.5rem;
-  padding: 5px; }
+  font-size: 3rem;
+  padding: 5px 10px; }
 
 .u-grey--grad {
   background-image: linear-gradient(to right, #777, #eeee);
@@ -336,12 +336,16 @@ body {
     .card__description ol li {
       text-align: left; }
     .card__description--title {
+      font-family: monospace;
+      font-weight: 700;
+      letter-spacing: .6px;
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: 1.2rem;
       padding-right: 6px; }
     .card__description--result {
       display: inline-block;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      margin-left: 5px;
       border-radius: 3px;
       background-color: #7ed56f;
       color: #fff;
@@ -374,6 +378,25 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
 
+.disclosure {
+  font-family: monospace;
+  width: 100%;
+  background-image: linear-gradient(to right, #55c57a, #7ed56f);
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  padding: .5rem 5px;
+  margin-bottom: 1rem;
+  border-radius: 5px; }
+  .disclosure span {
+    cursor: pointer;
+    width: 5rem;
+    padding-right: 1rem;
+    display: block;
+    float: right;
+    color: inherit;
+    text-align: center; }
+
 .feature-box {
   height: 79rem;
   background-color: rgba(255, 255, 255, 0.7);
@@ -397,6 +420,31 @@ body {
     box-shadow: 0 5rem 5rem rgba(0, 0, 0, 0.7); }
   .feature-box__text {
     word-spacing: 3px; }
+
+.quote {
+  width: 60%;
+  background-color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 3rem 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5rem;
+  transform: skewX(-10deg); }
+  .quote > * {
+    transform: skewX(10deg); }
+  .quote__img {
+    width: 15rem;
+    height: 15rem;
+    background-color: #55c57a;
+    float: left;
+    object-fit: fill;
+    -webkit-clip-path: circle(50%);
+    clip-path: circle(50%);
+    margin-right: 5rem;
+    margin-bottom: 1.5rem;
+    -webkit-shape-outside: circle(40% at 50% 50%);
+    shape-outside: circle(40% at 50% 50%); }
+    .quote__img img {
+      height: 100%; }
 
 .row {
   max-width: 114rem;
@@ -462,6 +510,10 @@ body {
     transform: skewY(10deg); }
 
 .section-diversions {
-  padding: 30rem 0;
+  padding: 30rem 0 15rem 0;
   margin-top: -13rem;
+  background-color: #f7f7f7; }
+
+.section-getquote {
+  padding: 5rem 0;
   background-color: #f7f7f7; }
