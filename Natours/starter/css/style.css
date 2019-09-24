@@ -100,6 +100,7 @@ body {
   width: 50%;
   margin: 0 auto;
   background-image: linear-gradient(to right, #2998ff, #5643fa);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent; }
 
@@ -125,8 +126,26 @@ body {
   font-weight: 700;
   word-spacing: 2px; }
 
-.u-lineargrad {
+.u-lineargrad--blue {
   background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
+
+.u-icon {
+  display: inline-block;
+  font-size: 3.5rem;
+  padding: 5px; }
+
+.u-grey--grad {
+  background-image: linear-gradient(to right, #777, #eeee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; }
+
+.u-green--grad {
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent; }
 
@@ -206,6 +225,23 @@ body {
     box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.5);
     transform: translateY(0); }
 
+.btn-block {
+  text-align: center; }
+
+.classic-btn, .classic-btn:link, .classic-btn:visited {
+  background-color: #0366d6;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem 1.4rem;
+  border-radius: 5px;
+  margin: 1rem;
+  letter-spacing: 2px;
+  word-spacing: 3px; }
+  .classic-btn:hover, .classic-btn:active, .classic-btn:link:hover, .classic-btn:link:active, .classic-btn:visited:hover, .classic-btn:visited:active {
+    background-color: rgba(3, 102, 214, 0.75); }
+
 .card {
   perspective: 100rem;
   -moz-perspective: 100rem;
@@ -282,10 +318,34 @@ body {
       padding: 0rem 2rem;
       letter-spacing: .4px; }
       .card__description--pgraph-back {
-        font-weight: lighter;
+        display: inline-block;
+        margin: 9rem;
+        -webkit-font-weight: 100;
+        font-weight: 100;
         font-size: 3rem;
-        text-align: center;
-        margin: 9rem; }
+        text-align: center; }
+    .card__description--name {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 3px;
+      word-spacing: 4px;
+      padding: 3px; }
+    .card__description--desc {
+      font-size: 1.9rem; }
+    .card__description ol li {
+      text-align: left; }
+    .card__description--title {
+      text-transform: uppercase;
+      font-size: 1rem;
+      padding-right: 6px; }
+    .card__description--result {
+      display: inline-block;
+      font-size: 1.2rem;
+      border-radius: 3px;
+      background-color: #7ed56f;
+      color: #fff;
+      padding: 5px 7px; }
 
 .composition {
   position: relative; }

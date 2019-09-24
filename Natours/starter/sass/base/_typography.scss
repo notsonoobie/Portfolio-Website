@@ -63,6 +63,7 @@ body{
     width: 50%;
     margin: 0 auto;
     background-image: linear-gradient(to right,$color-box--blueL,$color-box--blueD);
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }

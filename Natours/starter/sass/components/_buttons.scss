@@ -77,3 +77,21 @@
         @include box-shadow--btn;  //Shadows on hover and click
     }
 }
+.btn-block{
+    text-align: center;
+}
+.classic-btn,.classic-btn:link,.classic-btn:visited{
+    background-color: $color-blue;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $color-white;
+    padding: 1rem 1.4rem;
+    border-radius: 5px;
+    margin: 1rem;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    &:hover,&:active{
+        background-color: rgba($color-blue,.75);
+    }
+}
