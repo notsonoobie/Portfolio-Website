@@ -43,3 +43,16 @@
     background-clip: text;
     color: transparent;
 }
+.u-cursor{
+    cursor: pointer;
+}
+.u-margin-top--md{
+    margin-top: 1rem;
+}
+.u-green--backgrad{
+    background-image: linear-gradient(to right, $color-primary--light,$color-primary--dark);
+    color: $color-white;
+    &::after{
+    background-image: linear-gradient(to right, $color-primary--light,$color-primary--dark);
+    }
+}

@@ -1,7 +1,7 @@
 .btn{
     font-size: 1.6rem;
 
-    &:link, &:visited{
+    &,&:link, &:visited{
         display: inline-block;
         text-transform: uppercase;
         text-decoration: none;
@@ -18,7 +18,8 @@
             opacity: 0;
         }
     }
-    &:active{
+    &:active,&:focus{
+        outline: none;
         transform: translateY(-0.2rem);
         box-shadow: 0 0.5rem 0.7rem rgba($color-black, 0.4);
     }
@@ -38,6 +39,13 @@
         color: $color-grey--dark;
         &::after{
             background-color: $color-white;
+        }
+    }
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+        &::after{
+            background-color: $color-primary;
         }
     }
     &--animate{

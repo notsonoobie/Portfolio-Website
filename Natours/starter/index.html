@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/Fonts/linea-open-source.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -186,6 +187,12 @@
                 </div>
             </section>
             <section class="section-getquote">
+                <div class="bg__video">
+                    <video class="bg__video-autoplay" autoplay muted loop>
+                        <source src="img/video.mp4" type="video/mp4">
+                        <source src="img/video.webm" type="video/webm">
+                    </video>
+                </div>
                 <div class="u-center-text u-margin-bottom--big">
                     <h2 class="heading-secondary">
                         Grab a Quote &amp; Stay Motivated
@@ -197,8 +204,33 @@
                             <img src="" alt="Quote Image" id="load-image" class="quote__img--content">
                         </figure>
                         <div class="quote__text">
-                            <h3 id="load-title" class="heading-tertiary u-margin-bottom--small">Loreum Ipsum</h3>
-                            <p id="load-quote" class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab facere, eos deserunt praesentium ex dolorum dolore corrupti maiores dignissimos aspernatur quas. Numquam consequuntur est vero incidunt </p>
+                            <h3 id="load-title" class="heading-tertiary u-margin-bottom--small u-grey--grad">Loreum Ipsum</h3>
+                            <p id="load-quote" class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab facere, eos deserunt praesentium ex dolorum dolore corrupti maiores dignissimos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-feedback">
+                <div class="row">
+                    <div class="feedback-block">
+                        <div class="feedback-block__form">
+                            <form action="/" method="POST" class="form">
+
+                                <h3 class="heading-secondary u-letter-spacing--small u-margin-bottom--small">Request a Callback</h3>
+                                <label for="name" class="form__label">Full Name</label>
+                                <input type="text" id="name" class="form__input" name="name" placeholder="Enter Full Name" required>
+                                <label for="contact" class="form__label">Contact</label>
+                                <input type="text" id="contact" class="form__input" name="contact" placeholder="Contact Details" required>
+                                <label for="email" class="form__label">Email</label>
+                                <input type="email" id="email" class="form__input" name="email" placeholder="E-mail" required>
+                                <div class="form__radio">
+                                <input type="radio" id="label1" class="form__radio--input" value="Phone" name="radio-inputs" checked>
+                                <label for="label1" class="form__radio--label"><span class="form__radio--btn"></span> Response via Phone</label>
+                                <input type="radio" id="label2" class="form__radio--input" value="Email" name="radio-inputs">
+                                <label for="label2" class="form__radio--label"><span class="form__radio--btn"></span> Response via Email</label>
+                                </div>
+                                <button type="submit" class="btn u-green--backgrad u-cursor u-margin-top--md">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>

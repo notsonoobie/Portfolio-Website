@@ -20,5 +20,12 @@
 }
 .section-getquote{
     padding: 5rem 0;
-    background-color: $color-grey--light-1;
+    //background-color: $color-grey--light-1;
+    position: relative;
+}
+.section-feedback{
+    margin: 10rem;
+    padding: 10rem;
+    background-image: linear-gradient(to right bottom , $color-primary--light,$color-primary--dark);
+    border-radius: 4rem;
 }
