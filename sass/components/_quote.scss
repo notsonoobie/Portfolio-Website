@@ -1,0 +1,42 @@
+.quote{
+    width: 60%;
+    background-color: rgba($color-white,.8);
+    margin: 0 auto;
+    box-shadow: 0 3rem 2rem rgba($color-black, .1);
+    border-radius: 5px;
+    padding: 5rem;
+    transform: skewX(-10deg);
+
+    &__img{
+        width: 15rem;
+        height: 15rem;
+        //background-color: rgba($color-primary, .1);
+        background-image: linear-gradient(to right bottom,$color-box--blueL,$color-box--blueD);
+        float: left;
+        object-fit: fill;
+        -webkit-clip-path: circle(50%);
+        clip-path: circle(50%);
+        margin-right: 5rem;
+        margin-top: 10%;
+        transform: skewX(+10deg) translateY(-18%);
+        //margin-bottom: 1.5rem;
+        //-webkit-shape-outside: circle(40% at 50% 50%);  //For flowing the text around the shape of the image
+        //shape-outside: circle(40% at 50% 50%);
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__text{
+        transform: skewX(+10deg);
+        letter-spacing: 3px;
+        h3::before{
+            content:" - "; 
+        }
+        p{
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+        }
+    }
+
+}

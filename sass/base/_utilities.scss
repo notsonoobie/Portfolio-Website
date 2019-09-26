@@ -1,0 +1,58 @@
+.u-center-text{
+    text-align: center;
+}
+.u-margin-bottom--small{
+    margin-bottom: 1.5rem;
+}
+.u-margin-bottom--medium{
+    margin-bottom: 4rem;
+}
+.u-margin-bottom--big{
+    margin-bottom: 8rem;
+}
+.u-letter-spacing--small{
+    letter-spacing: 1.5px;
+}
+.u-color--white{
+    color: $color-white;
+}
+.u-focus{
+    font-weight: 700;
+    word-spacing: 2px;
+}
+.u-lineargrad--blue{
+        background-image: linear-gradient(to right bottom,$color-box--blueL,$color-box--blueD);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+}
+.u-icon{
+    display: inline-block;
+    font-size: 3rem;
+    padding: 5px 10px;
+}
+.u-grey--grad{
+    background-image: linear-gradient(to right, $color-grey--dark,$color-grey--light-2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.u-green--grad{
+    background-image: linear-gradient(to right, $color-primary--light,$color-primary--dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.u-cursor{
+    cursor: pointer;
+}
+.u-margin-top--md{
+    margin-top: 1rem;
+}
+.u-green--backgrad{
+    background-image: linear-gradient(to right, $color-primary--light,$color-primary--dark);
+    color: $color-white;
+    &::after{
+    background-image: linear-gradient(to right, $color-primary--light,$color-primary--dark);
+    }
+}
