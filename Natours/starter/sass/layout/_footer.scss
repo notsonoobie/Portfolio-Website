@@ -1,0 +1,46 @@
+.footer{
+    background-color: $color-grey--dark-1;
+    padding: 10rem 5rem;
+    border-radius: 1rem;
+    &__logo{
+        width: 18rem;
+        height: 15rem;
+    }
+    &__copyright{
+        font-size: $default-font--size;
+        color: $color-white;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-family: inherit;
+        margin-bottom: 1rem;
+    }
+    &__links{
+        &--text{
+            display: block;
+            font-size: 1.4rem;
+            color: $color-grey--light-2;
+            font-weight: lighter;
+            padding: 2px;
+            margin: 5px;
+            font-weight: 300;
+            letter-spacing: 1.4px;
+            font-family: inherit;
+            i{
+                font-size: 2rem;
+                margin-right: 5px;
+            }
+        }
+        & a,a:link,a:visited{
+            text-decoration: none;
+            color: inherit;
+            outline: none;
+        }
+    }
+    blockquote{
+        text-align: center;
+        i{
+            font-size: 7rem;
+        }
+        font-size: 2rem;
+    }
+}

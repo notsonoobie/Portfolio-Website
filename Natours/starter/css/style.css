@@ -572,6 +572,43 @@ body {
       font-family: 'Dancing Script', cursive;
       font-size: 3rem; }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 5rem;
+  border-radius: 1rem; }
+  .footer__logo {
+    width: 18rem;
+    height: 15rem; }
+  .footer__copyright {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-family: inherit;
+    margin-bottom: 1rem; }
+  .footer__links--text {
+    display: block;
+    font-size: 1.4rem;
+    color: #eeee;
+    font-weight: lighter;
+    padding: 2px;
+    margin: 5px;
+    font-weight: 300;
+    letter-spacing: 1.4px;
+    font-family: inherit; }
+    .footer__links--text i {
+      font-size: 2rem;
+      margin-right: 5px; }
+  .footer__links a, .footer__links a:link, .footer__links a:visited {
+    text-decoration: none;
+    color: inherit;
+    outline: none; }
+  .footer blockquote {
+    text-align: center;
+    font-size: 2rem; }
+    .footer blockquote i {
+      font-size: 7rem; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
