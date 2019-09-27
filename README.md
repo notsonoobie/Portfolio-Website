@@ -33,19 +33,20 @@ The `main.scss` file will include all the `7 Directories Files` in order, which 
 
 ## Table of Contents :
 
-1. Header - Contains Header Elements & Contents
-2. Main - Contains Main Elements &amp; Contents of the Webpage, includes :
+1. Navigation - Navigation Button which remains at a fixed position on extreme right side of the page.
+2. Header - Contains Header Elements & Contents
+3. Main - Contains Main Elements &amp; Contents of the Webpage, includes :
      * About Section
      * Feature Section
      * Diversion Section
      * Quote Section (Getting Quote through AJAX Call)
      * Feedback Section
-3. Footer - Contains Footer Elements, Copyrights Details, Webpage Details, &amp; Website Logo.
+4. Footer - Contains Footer Elements, Copyrights Details, Webpage Details, &amp; Website Logo.
 
 ## Features Left to be Implemented :
 
    * Multiple Device/Screen Support `Currently Designed only for Large Devices`
-   * Navigation Element
+   * ~Navigation Element~
    * Server Side Implementation to react with Front-end & Forms
    * SEO Optimization
    * Security Optimization
