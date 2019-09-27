@@ -48,6 +48,7 @@ The `main.scss` file will include all the `7 Directories Files` in order, which 
    * Navigation Element
    * Server Side Implementation to react with Front-end & Forms
    * SEO Optimization
+   * Security Optimization
    
    ***
    
