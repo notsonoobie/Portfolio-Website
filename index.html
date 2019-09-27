@@ -16,6 +16,22 @@
         <title>Rahul Gupta | My Resume</title>
     </head>
     <body>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navigation__toggle">
+            <label for="navigation__toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <div class="navigation__bg">&nbsp;</div>
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#features" class="navigation__link">Features</a></li>
+                    <li class="navigation__item"><a href="#profile" class="navigation__link">Profile</a></li>
+                    <li class="navigation__item"><a href="#quote-api" class="navigation__link">Quote</a></li>
+                    <li class="navigation__item"><a href="#feed-back" class="navigation__link">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
         <header class="header">
             <div class="header__logo-box">
                 <img src="img/logo-white.png" alt="Logo" class="header__logo">
@@ -29,7 +45,7 @@
             </div>
         </header>
         <main>
-            <section class="section-about">
+            <section id="about" class="section-about">
                 <div class="u-center-text u-margin-bottom--big">
                     <h2 class="heading-secondary">
                         I am Rahul Gupta, but you can call me Noob
@@ -52,7 +68,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-features">
+            <section id="features" class="section-features">
                 <div id="about" class="row">
                     <div class="col-1-of-4">
                         <div class="feature-box">
@@ -84,7 +100,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-diversions">
+            <section id="profile" class="section-diversions">
                 <div id="about-me" class="u-center-text u-margin-bottom--big">
                     <h2 class="heading-secondary">
                         About Me
@@ -188,7 +204,7 @@
                     <a href="assets/Resume/RahulGupta-Resume.pdf" download="download" class="classic-btn" title="Download PDF Resume">Resume</a>
                 </div>
             </section>
-            <section class="section-getquote">
+            <section id="quote-api" class="section-getquote">
                 <div class="bg__video">
                     <video class="bg__video-autoplay" autoplay muted loop>
                         <source src="img/video.mp4" type="video/mp4">
@@ -212,7 +228,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section-feedback">
+            <section id="feed-back" class="section-feedback">
                 <div class="row">
                     <div class="feedback-block">
                         <div class="feedback-block__form">

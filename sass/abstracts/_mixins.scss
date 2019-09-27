@@ -22,3 +22,9 @@
     text-transform: uppercase;
     font-size: 1.3rem;
 }
+@mixin center-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
