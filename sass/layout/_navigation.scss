@@ -81,7 +81,7 @@
         }
     }
     &__checkbox:checked ~ &__bg{
-        transform: scale(60);
+        transform: scale(600);
     }
     &__checkbox:checked ~ &__nav{
         opacity: 1;

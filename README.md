@@ -4,6 +4,8 @@ Portfoilo Website Created with Pure &amp; Advanced HTML &amp; CSS, &amp; minimal
 ## Project Status :
 
 __`Work in Progress`__ :skull: 
+
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/234671fd-9264-4251-9390-8c8b24f84f50/deploy-status)](https://app.netlify.com/sites/showcasingmyself/deploys)
 
 ## Environments Required :
@@ -18,18 +20,53 @@ __`Work in Progress`__ :skull:
     
 ## Developer Dependencies :
 * `node-sass` [:link:](https://www.npmjs.com/package/node-sass)
+* `autoprefixer` [:link:](https://www.npmjs.com/package/autoprefixer)
+* `concat` [:link:](https://www.npmjs.com/package/concat)
+* `live-server` [:link:](https://www.npmjs.com/package/live-server)
+* `npm-run-all` [:link:](https://www.npmjs.com/package/npm-run-all)
+* `postcss-cli` [:link:](https://www.github.com/postcss/postcss-cli)
+
 
 ## SASS Compiler :
 1. Scripts :
-   * Compile on Command `node-sass sass/main.scss css/style.css` 
-   * Live Compile `node-sass sass/main.scss css/style.css -w`
-2. Install Client :
+   * Compiled CSS :
+   
+         node-sass sass/main.scss css/style.comp.css 
+   * Live SASS Compiler :
+            
+         node-sass sass/main.scss css/style.css -w
+   * Live Server :
+   
+         live-server
+   * Live SASS Compiler + Live Server (Parallel Flow) :
+   
+         npm-run-all --parallel devserver watch-sass
+   * CSS File Concatenation (NOTE : Since, the font folder is located in different directory, we have to explicitly specify that directory in style.css [ ../assets/Fonts/ ] ):
+          
+         concat -o css/style.concat.css assets/Fonts/linea-open-source.css css/style.comp.css
+   * CSS Prefixer for Browser Compatibility :
+   
+         postcss --use autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css
+   * Compress CSS Code :
+   
+         node-sass css/style.prefix.css css/style.css --output-style compressed
+   * Build Mode (Compile SASS + Concat CSS Files + CSS Prefixer + Compress CSS) - Sequential Flow :
+   
+         npm-run-all compile-sass concat-css-files add-prefix-css compress-css
+
+2. Install Clients :
 
         $ npm install
 
 3. Run SASS Compiler :
 
        $ npm run compile-sass
+4. Production Mode :
+
+       $ npm run build-css
+5. Development Mode :
+
+       $ npm run develop-css
 ***
 ## *Project Description* :
 
