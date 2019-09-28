@@ -2,13 +2,13 @@
     background-color: $color-grey--dark-1;
     padding: 10rem 5rem;
     border-radius: 1rem;
-    @include respond-to-device(phone){
+    @include respond-to-device(tab-port){
         padding: 7rem 5rem;
     }
     &__logo{
         width: 18rem;
         height: 15rem;
-        @include respond-to-device(phone){
+        @include respond-to-device(tab-port){
             display: none;
         }
     }

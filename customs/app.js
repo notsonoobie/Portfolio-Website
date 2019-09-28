@@ -1,7 +1,7 @@
 $(document).ready(function(){
     // Adding a disclosure to the top of the page
     $("body").prepend(
-        `<div class="disclosure"> NOTE : This Website is Compatible to be viewed with Large-Screen Devices (Mobile View is under Construction)<span class="right" title="Ignore">&#9747;</span></div>`
+        `<div class="disclosure"> Disclaimer : The Weebsite is under Development &amp; and released in Beta Version. If any issue found please leave a Message, it will be appreciable and will be acted upon soon.<span class="right" title="Ignore">&#9747;</span></div>`
     );
     
     // Toggling the navigation button (Basically unchechecking the checkbox with the help of label)

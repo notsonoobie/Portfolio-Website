@@ -1,9 +1,5 @@
 .feature-box{
-    height: 79rem;
-    @include respond-to-device(tab-port){
-        height: unset !important;
-        margin: 3rem 2rem !important;
-    }
+    height: 79rem;    
     background-color: rgba($color-white,.7);
     font-size: 1.5rem;
     padding: 3rem;
@@ -11,6 +7,15 @@
     border-radius: 10px; //Not setting it to 1rem because I don't want it to change as per default's!
     box-shadow: 0 2rem 2rem rgba($color-black,0.3);
     transition: 0.3s;
+    @include respond-to-device(tab-land){
+        height: unset !important;
+        //margin: 3rem 2rem !important;
+        padding: 1.5rem;
+    }
+    @include respond-to-device(tab-port){
+        height: unset !important;
+        margin: 3rem 2rem !important;
+    }
     &__icon{
         font-size: 6rem;
         margin-bottom: .5rem;

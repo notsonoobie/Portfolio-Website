@@ -2,6 +2,11 @@
     background-color: $color-grey--light-1;
     padding: 25rem 0;
     margin-top: -20vh;
+    & [class^="col-"]:not(:last-child){
+        @include respond-to-device(tab-land){
+            padding-left: 5%;
+        }
+    }
 }
 .section-features{
     padding: 20rem 0;

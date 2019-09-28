@@ -21,7 +21,11 @@ Portfoilo Website Created with Pure &amp; Advanced HTML &amp; CSS, &amp; minimal
 1. Scripts :
    * Compile on Command `node-sass sass/main.scss css/style.css` 
    * Live Compile `node-sass sass/main.scss css/style.css -w`
-2. Run SASS Compiler :
+2. Install Client :
+
+        $ npm install
+
+3. Run SASS Compiler :
 
        $ npm run compile-sass
 ***
@@ -42,10 +46,11 @@ The `main.scss` file will include all the `7 Directories Files` in order, which 
      * Quote Section (Getting Quote through AJAX Call)
      * Feedback Section
 4. Footer - Contains Footer Elements, Copyrights Details, Webpage Details, &amp; Website Logo.
+5. Responsive Design - The website if fully Responsive for Small Phones, Landscape Tablets, Portrait Tablets, Desktop &amp; Big Desktops.
 
 ## Features Left to be Implemented :
 
-   * Multiple Device/Screen Support `Currently Designed only for Large Devices`
+   * ~Multiple Device/Screen Support `Currently Designed only for Large Devices`~
    * ~Navigation Element~
    * Server Side Implementation to react with Front-end & Forms
    * SEO Optimization

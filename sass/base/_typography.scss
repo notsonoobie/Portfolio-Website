@@ -20,6 +20,16 @@ body{
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3rem;
+        @include respond-to-device(tab-land){
+            margin-left: -50%;
+            margin-right: -50%;
+        }
+        @include respond-to-device(tab-port){
+            letter-spacing: 2rem;
+            font-size: 5rem;
+            margin-left: -50%;
+            margin-right: -50%;
+        }
         @include respond-to-device(phone){
             letter-spacing: 1rem;
             font-size: 4rem;
@@ -35,6 +45,16 @@ body{
         font-weight: 400;
         animation: moveInRight 1.5s;
         margin-bottom: 7rem;
+        @include respond-to-device(tab-land){
+            margin-left: -50%;
+            margin-right: -50%;
+        }
+        @include respond-to-device(tab-port){
+            letter-spacing: 1.2rem;
+            font-size: 2rem;
+            margin-left: -50%;
+            margin-right: -50%;
+        }
         @include respond-to-device(phone){
             letter-spacing: .7rem;
             font-size: 1.5rem;
@@ -55,8 +75,12 @@ body{
     color: transparent;
     letter-spacing: .3rem;
     transition: .2s;
-    
+    @include respond-to-device(tab-port){
+        font-size: 3rem;
+        margin-top: 8rem;
+    }
     @include respond-to-device(phone){
+        margin-top: 5rem;
         font-size: 2.5rem;
     }
 

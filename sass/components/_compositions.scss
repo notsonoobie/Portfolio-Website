@@ -30,7 +30,7 @@
     &:hover &__photo:not(:hover){
         transform: scale(.9);
     }
-    @include respond-to-device(phone){
+    @include respond-to-device(tab-port){
         display: none;
     }
 }
