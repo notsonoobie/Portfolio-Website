@@ -2,7 +2,9 @@
 Portfoilo Website Created with Pure &amp; Advanced HTML &amp; CSS, &amp; minimal use of JS.
 ***
 ## Project Status :
- __`Work in Progress`__ :skull:
+
+__`Work in Progress`__ :skull: 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/234671fd-9264-4251-9390-8c8b24f84f50/deploy-status)](https://app.netlify.com/sites/showcasingmyself/deploys)
 
 ## Environments Required :
 * [Nodejs](https://nodejs.org/en/download/)
