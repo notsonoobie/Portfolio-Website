@@ -1,5 +1,9 @@
 .feature-box{
     height: 79rem;
+    @include respond-to-device(tab-port){
+        height: unset !important;
+        margin: 3rem 2rem !important;
+    }
     background-color: rgba($color-white,.7);
     font-size: 1.5rem;
     padding: 3rem;

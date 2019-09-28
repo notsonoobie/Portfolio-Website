@@ -1,4 +1,7 @@
 .quote{
+
+    display: table; //1
+
     width: 60%;
     background-color: rgba($color-white,.8);
     margin: 0 auto;
@@ -8,16 +11,21 @@
     transform: skewX(-10deg);
 
     &__img{
+
+        //display: table-row; //2
+        display: block;
+
         width: 15rem;
         height: 15rem;
         //background-color: rgba($color-primary, .1);
         background-image: linear-gradient(to right bottom,$color-box--blueL,$color-box--blueD);
-        float: left;
+        //float: left;
         object-fit: fill;
         -webkit-clip-path: circle(50%);
         clip-path: circle(50%);
-        margin-right: 5rem;
-        margin-top: 10%;
+        //margin-right: 5rem;
+        //margin-top: 10%;
+        margin: 0 auto;
         transform: skewX(+10deg) translateY(-18%);
         //margin-bottom: 1.5rem;
         //-webkit-shape-outside: circle(40% at 50% 50%);  //For flowing the text around the shape of the image
@@ -28,6 +36,9 @@
         }
     }
     &__text{
+
+        display: table-row; //3
+
         transform: skewX(+10deg);
         letter-spacing: 3px;
         h3::before{

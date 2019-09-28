@@ -56,3 +56,6 @@
     background-image: linear-gradient(to right, $color-primary--light,$color-primary--dark);
     }
 }
+.u-skew-x--small{
+    transform: skewX(-10deg);
+}

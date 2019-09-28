@@ -5,6 +5,10 @@ body{
     line-height: 1.7;
     color: $color-grey--dark;
     padding: 3rem;
+    @include respond-to-device(tab-port){  // width < 900px?
+        padding: 0;
+        margin: 0; //Removing Padding & Margin For Small & Medium Devices
+    }
 }
 
 .heading-primary{
@@ -16,6 +20,12 @@ body{
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3rem;
+        @include respond-to-device(phone){
+            letter-spacing: 1rem;
+            font-size: 4rem;
+            margin-left: -50%;
+            margin-right: -50%;
+        }
         animation: moveInLeft 1.5s;
     }
     &--sub{
@@ -25,6 +35,12 @@ body{
         font-weight: 400;
         animation: moveInRight 1.5s;
         margin-bottom: 7rem;
+        @include respond-to-device(phone){
+            letter-spacing: .7rem;
+            font-size: 1.5rem;
+            margin-left: -50%;
+            margin-right: -50%;
+        }
     }
 }
 .heading-secondary{
@@ -39,6 +55,10 @@ body{
     color: transparent;
     letter-spacing: .3rem;
     transition: .2s;
+    
+    @include respond-to-device(phone){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skewY(-5deg) skewX(15deg)  scale(1.1);
@@ -49,8 +69,25 @@ body{
     font-size: $default-font--size;
     font-weight: 700;
     text-transform: uppercase;
+    .section-about &{
+     @include respond-to-device(phone){
+       // width: 100vw;
+        text-align: center;
+    }}
 }
-.paragraph{
+.section-about .paragraph{
+    font-size: $default-font--size;
+    &:not(:last-child){
+        margin-bottom: 3rem;
+    }
+    @include respond-to-device(phone){
+       // width: 100vw !important;
+        text-align: center;
+        letter-spacing: 1px;
+        word-spacing: .3px;
+    }
+}
+.quote .paragraph{
     font-size: $default-font--size;
     &:not(:last-child){
         margin-bottom: 3rem;

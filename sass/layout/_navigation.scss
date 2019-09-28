@@ -12,6 +12,14 @@
         position: fixed;
         top: 6rem;
         right: 6rem;
+        @include respond-to-device(tab-port){
+            top: 4rem;
+            right: 4rem; 
+        }
+        @include respond-to-device(tab-port){
+            top: 3rem;
+            right: 3rem;
+        }
         z-index: 200;
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
     }
@@ -23,6 +31,14 @@
         position: fixed;
         top: 6.5rem;
         right: 6.5rem;
+        @include respond-to-device(tab-port){
+            top: 4.5rem;
+            right: 4.5rem;
+        }
+        @include respond-to-device(tab-port){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
         z-index: 100;
         //transform: scale(100);
         transition: transform .3s;

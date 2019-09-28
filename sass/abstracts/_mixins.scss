@@ -28,3 +28,37 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
+
+
+// MEDIA QUERIES
+
+/*
+
+1.  0-600px             PHONE
+2.  600px-900px         TABLET PORTRAIT
+3.  900px-1200px        TABLET LANDSCAPE
+4.  1200px-1800px       DESKTOP [ OUR INITIAL CODE ] - [ DON'T HAVE TO APPLY FOR THIS DEVICES ]
+5.  1800px +            BIG DESKTOPS
+
+*/
+
+// RECOMMENDED ORDER FOR ADDING MEDIA-QUERIES : Base ~ Typo ~ General Layout ~ Grid ~ Page Layout ~ Components
+
+// For media-queries  1rem === 1em === 16px
+// It is recommended to use 'em' system for media-queries, so if the end user changes font, appereance should change
+
+@mixin respond-to-device($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };  // 600px = 37.5em
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content };  // 900px = 56.25em
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content };  // 1200px = 75em
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };  // 1800px = 112.5em
+    }
+}

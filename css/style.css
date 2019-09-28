@@ -1,3 +1,12 @@
+/*
+
+1.  0-600px             PHONE
+2.  600px-900px         TABLET PORTRAIT
+3.  900px-1200px        TABLET LANDSCAPE
+4.  1200px-1800px       DESKTOP [ OUR INITIAL CODE ] - [ DON'T HAVE TO APPLY FOR THIS DEVICES ]
+5.  1800px +            BIG DESKTOPS
+
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -29,9 +38,21 @@
     opacity: 1;
     transform: translate(0); } }
 
-:root {
+html {
   font-size: 62.5%;
-  /* Default : 16px(100%) -> 10px(62.5%), so 62.5% = 10px */ }
+  /* Default : 16px(100%) -> 10px(62.5%), so 62.5% = 10px (1rem) */ }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 43.75%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 *, *::after, *::before {
   padding: 0;
@@ -49,6 +70,10 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0;
+      margin: 0; } }
 
 .heading-primary {
   color: #fff;
@@ -59,6 +84,12 @@ body {
     font-weight: 400;
     letter-spacing: 3rem;
     animation: moveInLeft 1.5s; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 4rem;
+        margin-left: -50%;
+        margin-right: -50%; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
@@ -66,6 +97,12 @@ body {
     font-weight: 400;
     animation: moveInRight 1.5s;
     margin-bottom: 7rem; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .7rem;
+        font-size: 1.5rem;
+        margin-left: -50%;
+        margin-right: -50%; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -79,6 +116,9 @@ body {
   color: transparent;
   letter-spacing: .3rem;
   transition: .2s; }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(-5deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 0.1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -87,10 +127,23 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
+  @media (max-width: 37.5em) {
+    .section-about .heading-tertiary {
+      text-align: center; } }
 
-.paragraph {
+.section-about .paragraph {
   font-size: 1.6rem; }
-  .paragraph:not(:last-child) {
+  .section-about .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+  @media (max-width: 37.5em) {
+    .section-about .paragraph {
+      text-align: center;
+      letter-spacing: 1px;
+      word-spacing: .3px; } }
+
+.quote .paragraph {
+  font-size: 1.6rem; }
+  .quote .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
 .card-standout-btn {
@@ -161,6 +214,9 @@ body {
   .u-green--backgrad::after {
     background-image: linear-gradient(to right, #7ed56f, #28b485); }
 
+.u-skew-x--small {
+  transform: skewX(-10deg); }
+
 .bg__video {
   position: absolute;
   top: 0;
@@ -169,7 +225,7 @@ body {
   height: 100%;
   opacity: .3;
   z-index: -10;
-  object-fit: cover;
+  object-fit: fill;
   overflow-x: hidden;
   overflow-y: hidden; }
 
@@ -350,10 +406,13 @@ body {
       .card__description--pgraph-back {
         display: inline-block;
         margin: 9rem;
-        -webkit-font-weight: 100;
-        font-weight: 100;
+        font-weight: 200;
         font-size: 3rem;
         text-align: center; }
+        @media (max-width: 75em) {
+          .card__description--pgraph-back {
+            margin: 10rem 0 !important;
+            width: 100% !important; } }
     .card__description--name {
       font-size: 2.5rem;
       text-transform: uppercase;
@@ -407,6 +466,9 @@ body {
       box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.5); }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.9); }
+  @media (max-width: 37.5em) {
+    .composition {
+      display: none; } }
 
 .disclosure {
   font-family: monospace;
@@ -418,6 +480,9 @@ body {
   padding: .5rem 5px;
   margin-bottom: 1rem;
   border-radius: 5px; }
+  @media (max-width: 56.25em) {
+    .disclosure {
+      display: none; } }
   .disclosure span {
     cursor: pointer;
     width: 5rem;
@@ -436,6 +501,10 @@ body {
   border-radius: 10px;
   box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.3);
   transition: 0.3s; }
+  @media (max-width: 56.25em) {
+    .feature-box {
+      height: unset !important;
+      margin: 3rem 2rem !important; } }
   .feature-box__icon {
     font-size: 6rem;
     margin-bottom: .5rem;
@@ -458,9 +527,16 @@ body {
   border-radius: 4rem;
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
   overflow: hidden; }
+  @media (max-width: 56.25em) {
+    .feedback-block {
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 50%, rgba(0, 0, 0, 0.1) 80%), url(../img/nat-10.jpg) !important;
+      height: unset; } }
   .feedback-block__form {
     width: 50%;
     padding: 5rem; }
+    @media (max-width: 56.25em) {
+      .feedback-block__form {
+        width: 100%; } }
 
 .form__input {
   font-family: inherit;
@@ -474,6 +550,9 @@ body {
   display: block;
   border-bottom: 3px solid transparent;
   transition: all .2s; }
+  @media (max-width: 56.25em) {
+    .form__input {
+      width: 90%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
@@ -513,10 +592,11 @@ body {
     display: none; }
   .form__radio--label {
     position: relative;
+    display: inline-block;
     cursor: pointer;
     margin-right: 4rem; }
   .form__radio--btn {
-    margin: 0 -.5rem;
+    margin: 1rem -1rem;
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
@@ -542,6 +622,7 @@ body {
     opacity: 1; }
 
 .quote {
+  display: table;
   width: 60%;
   background-color: rgba(255, 255, 255, 0.8);
   margin: 0 auto;
@@ -550,20 +631,20 @@ body {
   padding: 5rem;
   transform: skewX(-10deg); }
   .quote__img {
+    display: block;
     width: 15rem;
     height: 15rem;
     background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
-    float: left;
     object-fit: fill;
     -webkit-clip-path: circle(50%);
     clip-path: circle(50%);
-    margin-right: 5rem;
-    margin-top: 10%;
+    margin: 0 auto;
     transform: skewX(10deg) translateY(-18%); }
     .quote__img img {
       height: 100%;
       width: 100%; }
   .quote__text {
+    display: table-row;
     transform: skewX(10deg);
     letter-spacing: 3px; }
     .quote__text h3::before {
@@ -576,9 +657,15 @@ body {
   background-color: #333;
   padding: 10rem 5rem;
   border-radius: 1rem; }
+  @media (max-width: 37.5em) {
+    .footer {
+      padding: 7rem 5rem; } }
   .footer__logo {
     width: 18rem;
     height: 15rem; }
+    @media (max-width: 37.5em) {
+      .footer__logo {
+        display: none; } }
   .footer__copyright {
     font-size: 1.6rem;
     color: #fff;
@@ -612,8 +699,14 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto; }
+  @media (max-width: 56.25em) {
+    .row {
+      max-width: 80vw; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 5rem !important; } }
   .row::after {
     content: "";
     clear: both;
@@ -622,6 +715,13 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0 !important;
+          margin-bottom: 5rem !important; } }
+    @media (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -673,6 +773,14 @@ body {
   right: 6rem;
   z-index: 200;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__bg {
   height: 6rem;
@@ -684,6 +792,14 @@ body {
   right: 6.5rem;
   z-index: 100;
   transition: transform .3s; }
+  @media (max-width: 56.25em) {
+    .navigation__bg {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media (max-width: 56.25em) {
+    .navigation__bg {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -793,3 +909,9 @@ body {
   padding: 10rem;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
   border-radius: 4rem; }
+  @media (max-width: 56.25em) {
+    .section-feedback {
+      border-radius: 0rem;
+      margin: 5rem 0;
+      background-image: none !important;
+      padding: 0rem; } }
